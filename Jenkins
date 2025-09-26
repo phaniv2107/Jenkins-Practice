@@ -1,10 +1,7 @@
+@Library('sharedLibrary') _
+
 pipeline {
     agent any
-
-    options {
-        // Load shared library (Declarative way)
-        library 'sharedLibraries'
-    }
 
     stages {
         stage('stage1') {
