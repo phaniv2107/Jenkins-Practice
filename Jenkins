@@ -1,3 +1,4 @@
+@Library('shared-libraries')
 pipeline{
     agent any
     stages{
@@ -22,5 +23,11 @@ pipeline{
                 }
             }
         }
+        stage ('stag4 from sharedlibrary'){
+            steps {
+              shared-libraries.firstlib()
+            }
+        }
+
     }
 }
