@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('stage1') {
+            steps {
+                echo 'my first stage'
+            }
+        }
+
+        stage('stage2') {
+            steps {
+                echo 'my Second stage'
+            }
+        }
+
+        stage('stage3 gitcheckout') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-token',
+                    url: 'https://github.com/phaniv2107/Jenkins-Zero-To-Hero.git'
+            }
+        }
+    }
+}
