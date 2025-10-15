@@ -1,0 +1,8 @@
+@Library('sharedLibraries') _ // Load the shared library
+
+    myPipelineTemplate([
+        projectName: 'MyWebApp',
+        gitRepo: 'https://github.com/phaniv2107/devops-demo-project.git',
+        gitBranch: 'main',
+        buildTool: 'maven'
+    ])
