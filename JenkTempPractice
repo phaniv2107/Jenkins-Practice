@@ -2,7 +2,7 @@
 
     myPipelineTemplate([
         projectName: 'MyWebApp',
-        gitRepo: 'https://github.com/phaniv2107/devops-demo-project.git',
+        gitRepo: 'https://github.com/phaniv2107/Jenkins-Zero-To-Hero.git',
         gitBranch: 'main',
         buildTool: 'maven'
     ])
