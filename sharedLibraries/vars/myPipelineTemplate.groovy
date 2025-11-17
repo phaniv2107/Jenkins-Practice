@@ -30,6 +30,14 @@
                 always {
                     echo "Pipeline finished for project: ${config.projectName}"
                 }
+                success {
+                    emailext(
+                        subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                        body: "Good news! The build succeeded.\n\nCheck it here: ${env.BUILD_URL}",
+                        to: 'phanindra.vakalapudi@capgemini.com'
+                    )
+                }
+
             }
         }
     }
